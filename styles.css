@@ -1,0 +1,182 @@
+/* MISE EN PAGE DE L'ASPECT GÉNÉRAL */
+
+
+/* mise en page du fond */
+body {
+    background: #3b82f680;  /* couleur bleu clair du fond*/
+    font-family: Roboto,arial,sans-serif;  /* police utilisée dans la page web*/
+    display: flex;
+    color: #303030;  /*couleur de la police de la page par défaut */
+    }
+
+/*mise en page des deux titres de sections "Rendez-vous à rechercher" et "Vos rendez-vous en cours de recherche", 
+correspondants aux éléments "h1" en HTML*/   
+ .titre1 > h1{    /*titre de la classe "titre1"*/
+    font-weight: 500;  /* épaisseur de police */
+    font-size: 25px;  /* taille de police */
+    color :white;
+    text-align: center;  /*texte centré*/
+    width : 600px; 
+    padding: 0 50px 0 50px;
+    background: #0362af;  /*couleur des encadrés bleus*/
+    border-radius: 15px;
+    position : absolute;
+    left : 10px; /* position */
+    top : 8px
+}
+
+.titre2 > h1{  /*titre de la classe "titre2"*/
+    font-weight: 500;
+    font-size: 25px;
+    color : white;
+    text-align: center;
+    width : 600px;
+    padding: 0 50px 0 50px;
+    background: #0362af;
+    border-radius: 15px;
+    position : absolute;
+    right : 10px;
+    top : 8px
+}
+
+
+/* encadrés en blanc entourant chaque classe */    
+.contactez-nous{   /*encadré entourant la classe "contactez-nous" */
+    width : 500px;  /*largeur*/
+    border : 1px solid;
+    border-radius : 8px;
+    padding: 0 50px 0 50px;
+    background: white;
+    position : absolute;
+    left : 60px;  /* posisiotn*/
+    top :50px
+}
+
+.périmètre{  /*encadré entourant la classe "périmètre" */
+    width : 500px;
+    border : 1px solid;
+    border-radius : 8px;
+    padding: 0 50px 0 50px;
+    background: white;
+    position : absolute;
+    left : 60px;
+    top : 350px
+}
+
+.disponibilités{  /*encadré entourant la classe "disponibilités" */
+    width : 500px;
+    border : 1px solid;
+    border-radius : 8px;
+    padding: 0 50px 0 50px;
+    background: white;
+    position : absolute;
+    left : 60px;
+    top : 825px
+}
+
+.Affichage{  /*encadré entourant la classe "Affichage" */
+    width : 500px;
+    border : 1px solid;
+    border-radius : 8px;
+    padding: 0 50px 0 50px;
+    background: white;
+    position : absolute;
+    left : 785px;
+    top :50px
+}
+
+
+
+/*MISE EN PAGE DANS LES ENCADRÉS BLANCS*/
+
+/* emplacement du texte dans les encadrés*/
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 60px;
+    margin-top: 10px; /* espacement aux bords */
+    }
+
+/* mise en page des titres dans les encadrés blancs de chaque classe */
+
+.contactez-nous > h1 {  /* titre de la classe "contactez-nous" */
+    font-weight: 500;  /* épaisseur du titre*/
+    color : black   /* couleur du titre*/
+}
+
+.périmètre > h1 {  /* titre de la classe "perimètre" */
+    font-weight: 500;
+    color : black
+}
+
+.disponibilités > h1 {   /* titre de la classe "disponibilités" */
+    font-weight: 500;
+    color : black
+}
+
+.Affichage > h1 {  /* titre de la classe "Affichage" */
+    font-weight: 300;
+    color : black
+}
+
+
+
+/*mise en page des zones de texte, correspondant à "p" en HTML */
+.disponibilités > p {   /* texte de la classe "disponibilités" */
+    font-weight: 600;
+    color : black
+}
+
+.Affichage > p {  /* texte de la classe "Affichage" */
+    font-weight: 100;
+    color : #001367  /*couleur bleu marine dans l'encadré de droite*/
+}
+
+
+/* texte au dessus des zones de saisies, correspondants aux éléments "label" en HTML, dans l'élément de division "div" toutes classes confondues*/
+form div > label {  
+    margin-bottom: 7px;
+    font-weight: 600;
+    }
+
+/* text du menu déroulant des périmètres, correspondants aux éléments "select" en HTML, toutes classes confondues*/
+form div > select {  
+    height: 30px;
+    padding-left: 10px;
+    background-size: 15px;
+    }
+
+/* texte au dessus des zones de saisies, correspondants aux éléments "label" en HTML, dans l'élément de paragraohe "p", utile pour la classe "disponibilités" */
+form p > label { 
+    margin-bottom: 7px;
+    font-weight: 200;
+    }
+
+
+    
+/*MISE EN PAGE DU BOUTON */
+form button[value='submit'] {  /*mise en forme du bouton*/
+    width: 450px;  /*largeur*/ 
+    max-width: 700px;
+    height: 60px;
+    font-weight: 500;  /* épaisseur de l'écriture*/
+    font-size: 20px; /* taille de l'écriture*/ 
+    color : #403c35;
+    position : absolute;
+    left : 130px; /*position dans l'espace*/ 
+    top : 1360px;
+    background: white;
+    border: black(48, 48, 48, 0.5) solid 1px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px 0px #001367;  /* effet ombré autour du bouton */
+    color: #001367;
+    }
+
+
+
+
+
+
+    
+    
