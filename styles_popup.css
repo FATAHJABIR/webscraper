@@ -1,0 +1,16 @@
+body {
+    background: #3b82f680;
+    font-family: Roboto,arial,sans-serif;
+    color: #303030;
+    }
+div {
+        font-weight:normal;
+        font-size: 1em;
+        color :white;
+        text-align: center;
+        width : em;
+        padding: 0 50px 0 50px;
+        background: #0362af;
+        border-radius: 15px;
+        position : relative
+}

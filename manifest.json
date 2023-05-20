@@ -1,0 +1,19 @@
+{  
+  "manifest_version": 3,
+  "name": "PAPOU",
+  "description": "Searches Doctolib to enable you to find available appointments and warn you if appointments become available.",
+  "version": "1.0",
+  "icons": { 
+  "128": "images/icone_P_128.png"
+  },
+  "host_permissions":[
+    "<all_urls>"
+  ],
+  "permissions": ["notifications"],
+  "action":{
+    "default_popup": "pop-up.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+}
+}
