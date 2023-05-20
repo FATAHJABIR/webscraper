@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<!-- principales caractéristiques du document-->
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css"> <!-- lien vers le script CSS qui permet la mise en page-->
+    <script type="text/javascript" src=testJava.js> </script> <!-- lien vers le script Java qui va être exécuté-->
+    <title>Recherche d'un rendez-vous médical</title>  <!-- titre de la page web-->
+    <meta charset="utf-8">
+</head>
+<body>
+
+<form id="data">  <!--création du formumaire dans lequel chacun des éléments le composant vont être créés un par un-->
+
+<div class="titre1">  <!--création de la classe "titre1"-->
+    <h1>RENDEZ-VOUS À RECHERCHER</h1>  <!-- création du titre de cette classe-->
+</div>
+
+<div class="contactez-nous">  <!--création de la classe "contactez-nous"-->
+    <h1>Vous recherchez une spécialité particulière ? Indiquez-le ci-dessous !</h1>
+    <div>   
+        <label for="specialite">Spécialité recherchée </label> <!--création du texte attaché à la zone de saisie-->
+        <input type="text" id="specialite" name="specialite" placeholder="Cardiologue" required>  <!--création d'un champ de saisie, placeholder=texte affiché en continu pour donner un exemple, required=saisie requie pour valider le questionnaire-->
+    </div>
+    <div>   
+        <label for="nom_medic">Nom d'un médecin en particulier ? </label>
+        <input type="text" id="nom_medic" name="nom_medic" placeholder="Dr.Dupont">
+    </div>  
+</div>
+
+<div class="périmètre">
+    <h1>Où recherchez-vous votre rendez-vous ?</h1>
+
+<div>
+    <label for="adresse">Votre adresse</label>
+    <input type="text" id="adresse" name="adresse" placeholder="1 rue des Lilas">
+    </div>
+
+<div>
+    <label for="code postal">Code postal</label>
+    <input type="text" id="code-postal" name="code postal" placeholder="13100">
+    </div>
+
+<div>
+    <label for="ville">Ville</label>
+    <input type="text" id="ville" name="ville" placeholder="Aix-en-Provence" required>
+    </div>
+
+<div>
+    <label for="pays">Pays</label>
+    <input type="text" id="pays" name="pays" placeholder="FRANCE">
+    </div>
+
+<div>
+    <label for="périmètre"> Périmètre accepté </label>
+    <select name="périmètre" id="périmètre" required> <!--création du menu déroulant-->
+    <option value="" disabled selected hidden>Choisissez le périmètre accepté</option>
+    <option value="inférieur à 1 km">inférieur à 1km</option>  <!--création de la première option du menu déroulant-->
+    <option value="inférieur à 5 km">inférieur à 5km </option>
+    <option value="inférieur à 10 km">inférieur à 10km</option>
+    <option value="supérieur à 10 km">supérieur à 10km</option>
+    </select>
+</div>
+</div>
+
+<div class="disponibilités">
+    <h1>Quand êtes-vous disponible pour votre rendez-vous ?</h1>
+    <p>  <!--zone de paragraphe-->
+        Cochez les jours de la semaine durant lesquels vous souhaitez votre rendez-vous :<br> <!-- br = retour à la ligne dans le paragraphe-->
+
+        <input type="checkbox" name="Lundi" id="lun"> <label for="lun">Lundi</label><br> <!--création de la première case à cocher-->
+        <input type="checkbox" name="Mardi" id="mar"> <label for="mar">Mardi</label><br>
+        <input type="checkbox" name="Mercredi" id="mer"> <label for="mer">Mercredi</label><br>
+        <input type="checkbox" name="Jeudi" id="jeu"> <label for="jeu">Jeudi</label><br>
+        <input type="checkbox" name="Vendredi" id="ven"> <label for="ven">Vendredi</label><br>
+        <input type="checkbox" name="Samedi" id="sam"> <label for="sam">Samedi</label><br>
+        <input type="checkbox" name="Dimanche" id="dim"> <label for="dim">Dimanche</label><br>
+        </p>
+    <p>
+        Cochez les horaires de la journée durant lesquels vous souhaitez votre rendez-vous :<br>
+        <input type="checkbox" name="8-10" id="8-10"> <label for="lun"> 8h-10h</label><br>
+        <input type="checkbox" name="10-12" id="10-12"> <label for="mar">10h-12h</label><br>
+        <input type="checkbox" name="12-14" id="12-14"> <label for="mer">12h-14h</label><br>
+        <input type="checkbox" name="14-16" id="14-16"> <label for="jeu">14h-16h</label><br>
+        <input type="checkbox" name="16-18" id="16-18"> <label for="ven">16h-18h</label><br>
+        <input type="checkbox" name="18-20" id="18-20"> <label for="sam">18h-20h</label><br>
+        </p>
+</div>
+
+<div>
+    <button type="submit" value="submit">Rechercher ce rendez-vous</button> <!--création du bouton, le type "submit" permettra d'envoyer les données lorsque cliqué-->
+</div>
+
+
+<div class="titre2">
+    <h1>VOS RENDEZ-VOUS EN COURS DE RECHERCHE</h1>
+</div>
+
+<div class="Affichage">
+    <h1>Votre rendez-vous en cours de recherche : </h1>
+    <p id="spe"> </p>  <!--création d'une zone de texte dont l'id est "spe", et dont le contenu va pouvoir être modifié-->
+
+    <p id="nom_medecin"> </p>
+
+    <p id="lieu"> </p>
+
+    <p id="peri"> </p>
+
+    <p id="dispo"> </p>
+
+    </div>
+
+
+<script src="testJava.js">
+</script>  <!--exécution du script JavaScript-->
+
+<!--modification du texte dans les zones précédentes reeconnues par leur id, en récupérant les chaines de caractères stockées dans le local Storage-->
+<script> 
+    document.getElementById("spe").innerHTML = "Spécialité : " + monStockage.getItem("specialite");
+    document.getElementById("nom_medecin").innerHTML = "Nom médecin : " + monStockage.getItem("nom_medecin");
+    document.getElementById("lieu").innerHTML = "Lieu de la recherche : " + monStockage.getItem("adresse") +" " + monStockage.getItem("code_postal ") +" " + monStockage.getItem("ville") +" "+ monStockage.getItem("pays") ;
+    document.getElementById("peri").innerHTML = "Périmètre : " + monStockage.getItem("perimetre");
+    document.getElementById("dispo").innerHTML = "Disponibilités : " + monStockage.getItem("jours")+ monStockage.getItem("horaires");
+</script>
+
+
+</form>
+</body>
+</html>
