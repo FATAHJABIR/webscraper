@@ -30,7 +30,7 @@ let main = async(lieu, rdv) =>{
     let URL = "https://www.doctolib.fr/";
     let old_availabilites = new Map();
 
-    //old_availabilites = JSON.parse(localStorage.getItem("availabilities"))
+    old_availabilites = JSON.parse(localStorage.getItem("availabilities"))
     try{
         const browser = await puppeteer.launch({headless: false});
         const page = await browser.newPage();
@@ -119,7 +119,7 @@ let main = async(lieu, rdv) =>{
             comparaison_dictionnaire(old_availabilites, availabilities)
         }
         let myMap_serialized = JSON.stringify(old_availabilites);
-        //localStorage.setItem("availabilities", myMap_serialized);
+        localStorage.setItem("availabilities", myMap_serialized);
     }
     catch(err){
         console.log(err)
