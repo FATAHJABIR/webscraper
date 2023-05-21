@@ -1,7 +1,7 @@
-import main_actual from "./src/index.js";
+import main from "./src/index.js";
 
 
-setInterval(test, 30000); 
+//setInterval(test, 30000); 
 //permet de lancer périodiquement la fonction de recherche
 
 function test (){
@@ -16,7 +16,8 @@ function test (){
 
 
         // fonction qui scan le web
-        let lieu = "metz"
-        let rdv = "covid"
-        main_actual(lieu, "rdv")
+        let lieu = "Paris";
+        let rdv = "covid";
+        main(lieu, rdv);
     }
+test();

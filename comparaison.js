@@ -21,7 +21,7 @@ function comparaison_dictionnaire(dict_vieux, dict_nouveaux){
     return changement;
 }
 
-console.log(comparaison_dictionnaire(vieux,jeune));
+// console.log(comparaison_dictionnaire(vieux,jeune));
 
 function notification(rdv){
     chrome.notifications.create({
