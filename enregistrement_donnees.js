@@ -58,7 +58,9 @@ function test1 (form){
     localStorage.setItem('jours', jours);
     localStorage.setItem('horaires', horaires);
     
+    
 }
+
 
 
 
