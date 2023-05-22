@@ -116,7 +116,18 @@ let main = async(lieu, rdv) =>{
             old_availabilites = availabilities;
         }
         else{
-            comparaison_dictionnaire(old_availabilites, availabilities)
+            let nouveau_rdv = comparaison_dictionnaire(old_availabilites, availabilities)
+            if( nouveau_rdv != []){
+                let rdv_string = nouveau_rdv.toString();
+                    chrome.notifications.create({
+                    type: 'basic',
+                    iconUrl: '/images/icone_P_128.png',
+                    title: `Votre nouveau rendez-vous`,
+                    message: "Voici les nouveaux rendez-vous" + rdv_string,
+                    priority: 1
+                    });
+
+            }
         }
         let myMap_serialized = JSON.stringify(old_availabilites);
         localStorage.setItem("availabilities", myMap_serialized);

@@ -1,3 +1,5 @@
+document.getElementById("supprime").addEventListener("click", supression);
+
 function supression(){
     localStorage.setItem('specialite', null);  //clé='specialité' ; valeur = variable specialite
     localStorage.setItem('nom_medecin', null);
@@ -8,4 +10,5 @@ function supression(){
     localStorage.setItem('perimetre', null);
     localStorage.setItem('jours', null);
     localStorage.setItem('horaires', null);
+    localStorage.setItem('availabilities',null);
 }
