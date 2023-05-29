@@ -1,0 +1,11 @@
+Bonjour, 
+
+Etant donnée nos soucis au niveau du recollement des parties, 
+voici comment vous pouvez tester chaque partie individuelle de notre code
+
+Pour les opération de web-scraping, vous pouvez lancer background_test.js
+Comme la mémoire est gérée par le nanivagateur, ce code de test ne gère pas de mémoire,
+aussi avons nous commenté les partie qui comparent au dictionnaires précèdemment stockés
+
+Pour tester les parties HTML CSS, il suffit d'ajouter l'extension comme décrit dans le 
+rapport. Cela fonctionne malgrè le message d'erreur.
